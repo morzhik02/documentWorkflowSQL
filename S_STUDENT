@@ -1,0 +1,27 @@
+-- Table: public.S_STUDENT
+
+-- DROP TABLE public."S_STUDENT";
+
+CREATE TABLE IF NOT EXISTS public."S_STUDENT"
+(
+    "ID" character varying(9) COLLATE pg_catalog."default" NOT NULL,
+    "IIN" character varying(12) COLLATE pg_catalog."default",
+    "LAST_NAME" character varying(70) COLLATE pg_catalog."default",
+    "FIRST_NAME" character varying(70) COLLATE pg_catalog."default",
+    "MID_NAME" character varying(70) COLLATE pg_catalog."default",
+    "GROUP_ID" character varying(9) COLLATE pg_catalog."default",
+    "GPA" character varying(3) COLLATE pg_catalog."default",
+    "CREATED" date,
+    "CREATED_BY" character varying(9) COLLATE pg_catalog."default",
+    "LAST_UPD" date,
+    "LAST_UPD_BY" character varying(9) COLLATE pg_catalog."default",
+    CONSTRAINT "S_STUDENT_pkey" PRIMARY KEY ("ID")
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public."S_STUDENT"
+    OWNER to postgres;
+
+COMMENT ON TABLE public."S_STUDENT"
+    IS 'Таблица студентов';
