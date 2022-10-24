@@ -1,0 +1,26 @@
+-- Table: public.S_USER
+
+-- DROP TABLE public."S_USER";
+
+CREATE TABLE IF NOT EXISTS public."S_USER"
+(
+    "ID" character varying(9) COLLATE pg_catalog."default" NOT NULL,
+    "FIRST_NAME" character varying(70) COLLATE pg_catalog."default",
+    "LAST_NAME" character varying(70) COLLATE pg_catalog."default",
+    "MID_NAME" character varying(70) COLLATE pg_catalog."default",
+    "LOGIN" character varying(80) COLLATE pg_catalog."default",
+    "CREATED" date,
+    "CREATED_BY" character varying(9) COLLATE pg_catalog."default",
+    "LAST_UPD" date,
+    "LAST_UPD_BY" character varying(9) COLLATE pg_catalog."default",
+    "ROLE_TYPE" character varying(20) COLLATE pg_catalog."default",
+    CONSTRAINT "S_USER_pkey" PRIMARY KEY ("ID")
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public."S_USER"
+    OWNER to postgres;
+
+COMMENT ON TABLE public."S_USER"
+    IS 'Таблица пользователей';
