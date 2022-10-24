@@ -1,0 +1,26 @@
+-- Table: public.S_ATT
+
+-- DROP TABLE public."S_ATT";
+
+CREATE TABLE IF NOT EXISTS public."S_ATT"
+(
+    "ID" character varying(9) COLLATE pg_catalog."default" NOT NULL,
+    "PAR_ROW_ID" character varying(9) COLLATE pg_catalog."default",
+    "FILE_PATH" character varying(300) COLLATE pg_catalog."default",
+    "FILE_TYPE" character varying(50) COLLATE pg_catalog."default",
+    "FILE_SIZE" character varying COLLATE pg_catalog."default",
+    "FILE_NAME" character varying(70) COLLATE pg_catalog."default",
+    "CREATED" date,
+    "CREATED_BY" character varying(9) COLLATE pg_catalog."default",
+    "LAST_UPD" date,
+    "LAST_UPD_BY" character varying(9) COLLATE pg_catalog."default",
+    CONSTRAINT "S_ATT_pkey" PRIMARY KEY ("ID")
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public."S_ATT"
+    OWNER to postgres;
+
+COMMENT ON TABLE public."S_ATT"
+    IS 'Таблица вложений';
