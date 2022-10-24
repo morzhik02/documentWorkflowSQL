@@ -1,0 +1,25 @@
+-- Table: public.S_ANSW
+
+-- DROP TABLE public."S_ANSW";
+
+CREATE TABLE IF NOT EXISTS public."S_ANSW"
+(
+    "ID" character varying(9) COLLATE pg_catalog."default" NOT NULL,
+    "PAR_ROW_ID" character varying(9) COLLATE pg_catalog."default",
+    "ANSW_TYPE" character varying(100) COLLATE pg_catalog."default",
+    "DATE_SEND" date,
+    "ANSW_TEXT" character varying(500) COLLATE pg_catalog."default",
+    "CREATED" date,
+    "CREATED_BY" character varying(9) COLLATE pg_catalog."default",
+    "LAST_UPD" date,
+    "LAST_UPD_BY" character varying(9) COLLATE pg_catalog."default",
+    CONSTRAINT "S_ANSW_pkey" PRIMARY KEY ("ID")
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public."S_ANSW"
+    OWNER to postgres;
+
+COMMENT ON TABLE public."S_ANSW"
+    IS 'Таблица ответов';
