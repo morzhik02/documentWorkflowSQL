@@ -1,0 +1,25 @@
+-- Table: public.S_DOC_EX
+
+-- DROP TABLE public."S_DOC_EX";
+
+CREATE TABLE IF NOT EXISTS public."S_DOC_EX"
+(
+    "ID" character varying(9) COLLATE pg_catalog."default" NOT NULL,
+    "PAR_ROW_ID" character varying(9) COLLATE pg_catalog."default",
+    "DOC_TITLE" character varying(100) COLLATE pg_catalog."default",
+    "COMM" character varying COLLATE pg_catalog."default",
+    "DOC_SUB_TYPE" character varying(100) COLLATE pg_catalog."default",
+    "CREATED" date,
+    "CREATED_BY" character varying(9) COLLATE pg_catalog."default",
+    "LAST_UPD" date,
+    "LAST_UPD_BY" character varying(9) COLLATE pg_catalog."default",
+    CONSTRAINT "S_DOC_EX_pkey" PRIMARY KEY ("ID")
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public."S_DOC_EX"
+    OWNER to postgres;
+
+COMMENT ON TABLE public."S_DOC_EX"
+    IS 'Расширительная таблица документов';
