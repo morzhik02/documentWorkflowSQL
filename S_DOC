@@ -1,0 +1,26 @@
+-- Table: public.S_DOC
+
+-- DROP TABLE public."S_DOC";
+
+CREATE TABLE IF NOT EXISTS public."S_DOC"
+(
+    "NUM" character varying(15) COLLATE pg_catalog."default",
+    "STUD_ID" character varying(9) COLLATE pg_catalog."default",
+    "DOC_TYPE" character varying(100) COLLATE pg_catalog."default",
+    "OWNER_ID" character varying(9) COLLATE pg_catalog."default",
+    "STAT" character varying(100) COLLATE pg_catalog."default",
+    "CREATED" date,
+    "CREATED_BY" character varying(9) COLLATE pg_catalog."default",
+    "LAST_UPD" date,
+    "LAST_UPD_BY" character varying(9) COLLATE pg_catalog."default",
+    "ID" character varying(9) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT "S_DOC_pkey" PRIMARY KEY ("ID")
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public."S_DOC"
+    OWNER to postgres;
+
+COMMENT ON TABLE public."S_DOC"
+    IS 'Таблица документов';
