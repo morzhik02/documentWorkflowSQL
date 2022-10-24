@@ -1,0 +1,24 @@
+-- Table: public.S_GROUP
+
+-- DROP TABLE public."S_GROUP";
+
+CREATE TABLE IF NOT EXISTS public."S_GROUP"
+(
+    "ID" character varying(9) COLLATE pg_catalog."default" NOT NULL,
+    "NAME" character varying(10) COLLATE pg_catalog."default",
+    "TEACH_ID" character varying(9) COLLATE pg_catalog."default",
+    "COURSE" character(1) COLLATE pg_catalog."default",
+    "CREATED" date,
+    "CREATED_BY" character varying(9) COLLATE pg_catalog."default",
+    "LAST_UPD" date,
+    "LAST_UPD_BY" character varying(9) COLLATE pg_catalog."default",
+    CONSTRAINT "S_GROUP_pkey" PRIMARY KEY ("ID")
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public."S_GROUP"
+    OWNER to postgres;
+
+COMMENT ON TABLE public."S_GROUP"
+    IS 'Таблица групп';
